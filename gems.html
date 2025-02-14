@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vieport" content="widht=device-widht, initial-scale=1.0">
+    <title>Види ограновування каменів</title>
+    <link rel="stylesheet" href="dark.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        .menu-btn{
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      background: none;
+      border: none;
+      color: white;
+      background-color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .side-nav a {
+      padding: 20px 25px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #444;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Види ограновування каменів</h1>
+        <button class="style-button" onclick="toggleStyle()">Змінити стиль</button>
+        <button class="menu-btn" onclick="openNav()">☰</button>
+    </header>
+    <div id="mySidenav" class="side-nav">
+        <span class="close-btn" onclick="closeNav()">×</span>
+        <a href="index.html">Головна</a>
+        <a href="gold_silver.html">Проби золоти та срібла</a>
+        <a href="weaving_types.html">Види плетінь</a>
+        <a href="gems.html">Види ограновування каменів</a>
+    </div>
+    <main>
+        <h2>Види ограновування каменів</h2>
+        <article>
+            <h3>Кругла (діамантова) огранка</h3>
+            <p>Hайпопулярніша, складається з 57 або 58 граней, 
+               що забезпечують максимальний блиск і гру світла.</p>
+            <img src="images/diamant.png" alt="Кругла (діамантова) огранка">    
+        </article>
+        <article>
+            <h3>Принцеса</h3>
+            <p>Kвадратна огранка з гострими кутами,
+               яка поєднує класичну елегантність і сучасний стиль,
+               створюючи яскраве сяйво.</p>
+            <img src="images/princes3.jpeg" alt="Принцеса">    
+        </article>
+        <article>
+            <h3>Смарагдова огранка</h3>
+            <p>Прямокутна форма з великими гранями,
+               що підкреслює чистоту каменю та створює ефект «дзеркального коридору».</p>
+            <img src="images/smaragd.jpeg" alt="Смарагдова огранка">
+        </article>
+        <article>
+            <h3>Овальна огранка</h3>
+            <p>Витягнута форма з м’якими контурами,
+               яка візуально збільшує розмір каменю та надає вишуканості прикрасі.</p>
+            <img src="images/ovl2.jpeg" alt="Овальна огранка">
+        </article>
+    </main>
+    <footer>
+        <p>Ювелірні вироби &copy; 2025</p>
+    </footer>
+    <script>
+    let currentStyle = 'dark'; // Стиль по умолчанию - светлый
+      
+    function toggleStyle() {
+        const link = document.querySelector('link[rel="stylesheet"]'); // Находим тег <link>
+          if (currentStyle === 'dark') {
+            link.href = 'light.css'; // Переключаем на темный стиль
+            currentStyle = 'light';
+          } else {
+            link.href = 'dark.css'; // Переключаем на светлый стиль
+            currentStyle = 'dark';
+          }
+        }
+    </script>
+
+    <script>
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+      
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+      </script>
+
+</body>    
+</html>

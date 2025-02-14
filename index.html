@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ювелірні вироби</title>
+  <link rel="stylesheet" href="dark.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    h1 {
+      text-shadow: 0 0 5px,
+               0 0 10px,
+               0 0 15px;
+
+      -webkit-text-stroke: 1px black;             
+    }
+    .content {
+      max-width: 600px;
+      margin: auto;
+      padding: 5px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .price-box{
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      width: 300px;
+      background-color: #b79831;
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    .price-box h3 {
+      margin-top: 0;
+      font-size: 18px;
+      text-align: center;
+      color: black;
+    }
+
+    .price-box p {
+      margin: 5 0;
+      font-size: 14px;
+      color: black;
+      font-weight: 900;
+    }
+
+    .menu-btn{
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      background: none;
+      border: none;
+      color: white;
+      background-color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .side-nav a {
+      padding: 20px 25px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #444;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+  </style>>      
+</head>
+<body>
+  <header>
+    <h1>Ласкаво просимо на сайт про ювелірні вироби</h1>
+    <button class="style-button" onclick="toggleStyle()">Змінити стиль</button>
+    <button class="menu-btn" onclick="openNav()">☰</button>
+    <div id="mySidenav" class="side-nav">
+      <span class="close-btn" onclick="closeNav()">×</span>
+      <a href="index.html">Головна</a>
+      <a href="gold_silver.html">Проби золота та срібла</a>
+      <a href="weaving_types.html">Види плетінь</a>
+      <a href="gems.html">Види ограновування каменів</a>
+    </div>
+
+  <div class="price-box">
+    <h3>Ціни на метали</h3>
+    <p>Золото: $46.03/₴1926</p>
+    <p>Срібло: $0.56/₴23.51</p>
+    <p>Платина: $24.76/₴1036</p>
+    <p>Паладій: $60.24/₴2520.46</p>
+  </div>
+
+  <main>
+    <h2>Історія ювелірного мистецтва</h2>
+    <div class="content">
+    <p>
+      Ювелірне мистецтво має глибокі корені, які сягають ще давніх цивілізацій. 
+        Перші прикраси були виготовлені з каменів, кісток та золота. 
+        У Стародавньому Єгипті ювелірні вироби використовувалися не лише як прикраси, але й як оберіги та символи статусу. 
+        Золото вважалося металом богів, а срібло — символом чистоти.
+    </p>
+    <p>
+      У Середньовіччі ювелірні вироби стали важливою частиною релігійного мистецтва. 
+        Виготовлялися розкішні хрести, ікони та інші реліквії. 
+        У епоху Відродження ювелірне мистецтво досягло нового рівня, коли майстри почали створювати складні композиції з дорогоцінних каменів та металів.
+    </p>
+    <img src="images/history.jpg" alt="Ювелірне мистецтво">
+    </div>
+
+    <!-- Секція про сучасні ювелірні тенденції -->
+    <div class="content">
+      <h2>Сучасні тенденції у ювелірному мистецтві</h2>
+      <p>
+        Сьогодні ювелірна справа є однією з найрозвиненіших галузей моди. 
+        Дизайнери поєднують традиційні техніки з сучасними технологіями, створюючи унікальні прикраси. 
+        Популярність набирають екологічні ювелірні вироби, виготовлені з перероблених матеріалів.
+      </p>
+      <p>
+        Однією з головних тенденцій є мінімалізм. Легкі, елегантні прикраси з тонкими деталями стають улюбленими серед молоді. 
+        Також популярні вироби з незвичайними каменями, такими як місячний камінь, аметист та опад.
+      </p>
+      <img src="images/modern.jpg" alt="Сучасні ювелірні вироби">
+    </div>
+
+    <!-- Секція про вибір ювелірних виробів -->
+    <div class="content">
+      <h2>Як обрати ювелірний виріб?</h2>
+      <p>
+        Вибір ювелірного виробу — це важливий процес, який потребує уваги до деталей. 
+        Ось кілька порад:
+      </p>
+      <ul>
+        <li><strong>Визначте свій стиль.</strong> Вибирайте прикраси, які відповідають вашому образу життя та уподобанням.</li>
+        <li><strong>Звертайте увагу на якість.</strong> Перевіряйте пробу металу та якість каменів.</li>
+        <li><strong>Оберіть правильний розмір.</strong> Кільця, браслети та намиста повинні бути зручними.</li>
+        <li><strong>Враховуйте подію.</strong> Для повсякденного носіння підійдуть прості прикраси, а для особливих випадків — більш розкішні.</li>
+      </ul>
+      <img src="images/choose.jpg" alt="Вибір ювелірних виробів">
+    </div>
+
+    <!-- Секція про догляд за ювелірними виробами -->
+    <div class="content">
+      <h2>Догляд за ювелірними виробами</h2>
+      <p>
+        Щоб ваші ювелірні вироби залишалися блискучими та красивими, дотримуйтесь цих простих правил:
+      </p>
+      <ul>
+        <li><strong>Чистіть прикраси регулярно.</strong> Використовуйте м'яку тканину або спеціальні засоби для чищення.</li>
+        <li><strong>Уникайте контакту з хімікатами.</strong> Знімайте прикраси під час прибирання або використання косметики.</li>
+        <li><strong>Зберігайте прикраси окремо.</strong> Використовуйте окремі коробочки або мішечки, щоб уникнути подряпин.</li>
+        <li><strong>Перевіряйте застібки.</strong> Регулярно перевіряйте, чи надійно закріплені камені та застібки.</li>
+      </ul>
+      <img src="images/care.jpg" alt="Догляд за ювелірними виробами">
+  </main>
+  <footer>
+    <p>Ювелірні вироби &copy; 2025</p>
+  </footer>
+  <script>
+  let currentStyle = 'dark'; // Стиль по умолчанию - светлый
+
+  function toggleStyle() {
+    const link = document.querySelector('link[rel="stylesheet"]'); // Находим тег <link>
+    if (currentStyle === 'dark') {
+      link.href = 'light.css'; // Переключаем на темный стиль
+      currentStyle = 'light';
+    } else {
+      link.href = 'dark.css'; // Переключаем на светлый стиль
+      currentStyle = 'dark';
+    }
+  }
+</script>
+
+<script>
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+</body>
+</html>

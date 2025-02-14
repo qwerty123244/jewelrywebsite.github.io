@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f1f;
+  color: #333;
+}
+
+header {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #555;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #777;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #000000;
+  color: #d4af37;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #eaeaea;
+  margin-top: 20px;
+}
+
+.table-container {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+form {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+form input, form textarea, form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #777;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center; /* Центрируем по горизонтали */
+  margin-bottom: 20px; /* Отступ между изображениями */
+}
+
+.center-box img {
+  max-width: 100%; /* Чтобы картинки не выходили за границы экрана */
+  height: auto;
+  border-radius: 10px; /* Закругленные углы (по желанию) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень (по желанию) */
+}
+
+
+
+article {
+  text-align: center; /* Центрирует весь контент внутри */
+}
+
+article img {
+  display: block;
+  margin: 10px auto; /* Центрирует картинку */
+  max-width: 40%; /* Ограничивает ширину, чтобы картинка не была слишком большой */
+  border-radius: 8px; /* Добавляет скругление */
+}

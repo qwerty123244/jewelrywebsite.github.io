@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Види плетінь</title>
+  <link rel="stylesheet" href="dark.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    .menu-btn{
+      font-size: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      background: none;
+      border: none;
+      color: white;
+      background-color: #333;
+      padding: 10px 15px;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .side-nav a {
+      padding: 20px 25px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #444;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Види плетінь у ювелірних виробах</h1>
+    <button class="style-button" onclick="toggleStyle()">Змінити стиль</button>
+    <button class="menu-btn" onclick="openNav()">☰</button>
+  </header>
+  <div id="mySidenav" class="side-nav">
+    <span class="close-btn" onclick="closeNav()">×</span>
+    <a href="index.html">Головна</a>
+    <a href="gold_silver.html">Проби золота та срібла</a>
+    <a href="weaving_types.html">Види плетінь</a>
+    <a href="gems.html">Види ограновування каменів</a>
+  </div>
+  <main>
+    <h2>Популярні види плетінь</h2>
+    <article>
+      <h3>Бісмарк</h3>
+      <p>Одне з найміцніших і красивих плетінь. Складається з безлічі ланок, переплетених між собою.</p>
+      <img src="images/bismarck.jpg" alt="Бісмарк">
+    </article>
+    <article>
+      <h3>Панцирне плетіння</h3>
+      <p>Класичне плетіння, відоме своєю простотою та елегантністю.</p>
+      <img src="images/armor.jpg" alt="Панцирне плетіння">
+    </article>
+    <article>
+      <h3>Якірне плетіння</h3>
+      <p>Схоже на ланцюги, що використовуються на кораблях. Відрізняється витривалістю.</p>
+      <img src="images/anchor.jpg" alt="Якірне плетіння">
+    </article>
+    <article>
+      <h3>Ромбічне плетіння</h3>
+      <p>Стильне плетіння з ланками у формі ромбів.</p>
+      <img src="images/rhombus.jpg" alt="Ромбічне плетіння">
+    </article>
+  </main>
+  <footer>
+    <p>Ювелірні вироби &copy; 2025</p>
+  </footer>
+  <script>
+  let currentStyle = 'dark'; // Стиль по умолчанию - светлый
+
+  function toggleStyle() {
+    const link = document.querySelector('link[rel="stylesheet"]'); // Находим тег <link>
+    if (currentStyle === 'dark') {
+      link.href = 'light.css'; // Переключаем на темный стиль
+      currentStyle = 'light';
+    } else {
+      link.href = 'dark.css'; // Переключаем на светлый стиль
+      currentStyle = 'dark';
+    }
+  }
+</script>
+
+<script>
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+</body>
+</html>
